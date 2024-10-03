@@ -97,8 +97,8 @@ for train_idx, test_idx in sss.split(X,y):
     num_bins = 20
     hist, bins = np.histogram(sorted_unlabeled_proba0, range=(0,1),bins=num_bins, density=True)
     bin_centers0 = (bins[:-1] + bins[1:]) / 2
-    frequency0 = hist * np.diff(bins)  # 计算频率
-    plt.bar(bin_centers0, frequency0, width=0.025, color='g', alpha=0.5, label='Frequency')   # 频率图
+    frequency0 = hist * np.diff(bins)  
+    plt.bar(bin_centers0, frequency0, width=0.025, color='g', alpha=0.5, label='Frequency')   
 
 
     # Plotting probability cumulative curves (landslide samples)
@@ -109,8 +109,8 @@ for train_idx, test_idx in sss.split(X,y):
     num_bins = 20
     hist, bins = np.histogram(sorted_unlabeled_proba1, range=(0,1),bins=num_bins, density=True)
     bin_centers1 = (bins[:-1] + bins[1:]) / 2
-    frequency1 = hist * np.diff(bins)  # 计算频率
-    plt.bar(bin_centers1, frequency1, width=0.025, color='r', alpha=0.5, label='Frequency')  # 频率图
+    frequency1 = hist * np.diff(bins)  
+    plt.bar(bin_centers1, frequency1, width=0.025, color='r', alpha=0.5, label='Frequency')  
     plt.show()
 
     plt.hist(ls_model.predict_proba(x_1d)[:, 1],bins=100)
@@ -150,8 +150,8 @@ LP_proba = pd.DataFrame(LP_proba)
 LP_proba.columns = ["LP_proba"]
 
 
-## output txt
+# output txt
 kk = pd.concat([MRD_point,LP_proba],axis=1)
-kk.to_csv(r".\sample_with_LP_proba.txt",index=False,header=True)
+# kk.to_csv(r".\sample_with_LP_proba.txt",index=False,header=True)
 
 
