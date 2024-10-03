@@ -1,3 +1,3 @@
 # Label-spreading-embedded-Positive-unlabelled-bagging-method
 
-this is
+This is an algorithm for landslide transition probability labelling of unlabelled sample in landslide susceptibility research. It combines the Label spreading and Positive-unlabeled bagging method to achieve a rational labelling of negative samples. It is implemented under the environment of python 3.6.5. The input data can be customised, and the program will adaptively construct the labelling model. The well-trained model can be used for labelling of noisy unlabelled samples. Due to the large size of the dataset, it can be available from the corresponding author with reasonable request. It is noting that the obtained data cannot be used for commercial purposes.
